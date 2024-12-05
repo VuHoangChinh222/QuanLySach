@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phieu_muons",
+  "info": {
+    "singularName": "phieu-muon",
+    "pluralName": "phieu-muons",
+    "displayName": "PhieuMuon"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "datecreate": {
+      "type": "date"
+    },
+    "datereturn": {
+      "type": "date"
+    },
+    "note": {
+      "type": "text"
+    },
+    "sts": {
+      "type": "string"
+    },
+    "id_the_thu_vien": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::the-thu-vien.the-thu-vien"
+    },
+    "nhan_vien": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nhan-vien.nhan-vien"
+    }
+  }
+}

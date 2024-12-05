@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rolls",
+  "info": {
+    "singularName": "roll",
+    "pluralName": "rolls",
+    "displayName": "VaiTro",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rollname": {
+      "type": "string"
+    },
+    "sts": {
+      "type": "string"
+    }
+  }
+}

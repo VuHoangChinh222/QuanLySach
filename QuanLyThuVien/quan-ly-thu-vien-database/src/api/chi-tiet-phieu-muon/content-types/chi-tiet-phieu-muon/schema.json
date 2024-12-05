@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chi_tiet_phieu_muons",
+  "info": {
+    "singularName": "chi-tiet-phieu-muon",
+    "pluralName": "chi-tiet-phieu-muons",
+    "displayName": "ChiTietPhieuMuon"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_phieu_muon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::phieu-muon.phieu-muon"
+    },
+    "id_sach": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sach.sach"
+    },
+    "sts": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

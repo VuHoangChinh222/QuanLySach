@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nhan_viens",
+  "info": {
+    "singularName": "nhan-vien",
+    "pluralName": "nhan-viens",
+    "displayName": "NhanVien",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "id_tai_khoan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tai-khoan.tai-khoan"
+    },
+    "sts": {
+      "type": "string"
+    }
+  }
+}

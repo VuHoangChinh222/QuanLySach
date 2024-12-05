@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tai_khoans",
+  "info": {
+    "singularName": "tai-khoan",
+    "pluralName": "tai-khoans",
+    "displayName": "TaiKhoan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "sts": {
+      "type": "string"
+    },
+    "roll": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::roll.roll"
+    }
+  }
+}

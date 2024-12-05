@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saches",
+  "info": {
+    "singularName": "sach",
+    "pluralName": "saches",
+    "displayName": "Sach",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "biginteger"
+    },
+    "sts": {
+      "type": "string"
+    },
+    "dateentry": {
+      "type": "date"
+    },
+    "id_tac_gia": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tac-gia.tac-gia"
+    },
+    "id_the_loais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::the-loai.the-loai"
+    }
+  }
+}
