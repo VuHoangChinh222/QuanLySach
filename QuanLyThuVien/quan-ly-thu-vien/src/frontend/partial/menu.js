@@ -1,3 +1,4 @@
+import { Link, Outlet } from "react-router-dom";
 function Menu() {
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
@@ -15,16 +16,16 @@ function Menu() {
             data-accordion="false"
           >
             <li className="nav-item">
-              <a href="index.html" className="nav-link">
+              <Link to="/" className="nav-link">
                 <i className="nav-icon fas fa-home"></i>
                 <p>Dashboard</p>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="QuanLyHeThong.html" className="nav-link">
+              <Link to="QuanLyHeThong" className="nav-link">
                 <i className="nav-icon fas fa-database"></i>
                 <p>Quản lý hệ thống</p>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="QuanLyKhoSach.html" className="nav-link">
@@ -33,10 +34,10 @@ function Menu() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="QuanLyDocGia.html" className="nav-link">
+              <Link to="QuanLyDocGia" className="nav-link">
                 <i className="nav-icon fas fa-user"></i>
                 <p>Quản lý độc giả</p>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="QuanLyMuonTraSach.html" className="nav-link">
