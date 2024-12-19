@@ -11,21 +11,26 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.4.1",
-    "@strapi/plugin-users-permissions": "5.4.1",
-    "@strapi/strapi": "5.4.1",
+    "@strapi/plugin-cloud": "5.5.0",
+    "@strapi/plugin-users-permissions": "5.5.0",
+    "@strapi/strapi": "5.5.0",
     "mysql2": "3.9.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "ff74cea0-716f-4886-98d8-acbb116cbacc"
+    "uuid": "96e5ee75-34f3-4609-b189-a4aa3877424c"
   }
 }

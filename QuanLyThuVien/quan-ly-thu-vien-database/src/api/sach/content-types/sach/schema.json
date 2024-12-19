@@ -4,38 +4,49 @@
   "info": {
     "singularName": "sach",
     "pluralName": "saches",
-    "displayName": "Sach",
-    "description": ""
+    "displayName": "Sach"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "sach_name": {
       "type": "string"
     },
     "price": {
       "type": "decimal"
     },
     "quantity": {
-      "type": "biginteger"
+      "type": "integer"
     },
-    "sts": {
-      "type": "string"
-    },
-    "dateentry": {
+    "date_entry": {
       "type": "date"
     },
-    "id_tac_gia": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::tac-gia.tac-gia"
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "id_the_loais": {
+    "sts": {
+      "type": "text"
+    },
+    "tac_gias": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::the-loai.the-loai"
+      "relation": "manyToMany",
+      "target": "api::tac-gia.tac-gia",
+      "inversedBy": "saches"
+    },
+    "the_loais": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::the-loai.the-loai",
+      "inversedBy": "saches"
     }
   }
 }

@@ -4,27 +4,27 @@
   "info": {
     "singularName": "tai-khoan",
     "pluralName": "tai-khoans",
-    "displayName": "TaiKhoan",
-    "description": ""
+    "displayName": "TaiKhoan"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "username": {
+    "user_name": {
       "type": "string"
+    },
+    "email": {
+      "type": "email"
     },
     "password": {
       "type": "password"
     },
-    "sts": {
-      "type": "string"
-    },
-    "roll": {
+    "vai_tros": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::roll.roll"
+      "relation": "manyToMany",
+      "target": "api::vai-tro.vai-tro",
+      "inversedBy": "tai_khoans"
     }
   }
 }

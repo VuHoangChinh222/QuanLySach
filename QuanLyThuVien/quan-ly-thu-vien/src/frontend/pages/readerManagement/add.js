@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 function AddReaderManagement() {
   return (
     <div>
@@ -41,13 +41,9 @@ function AddReaderManagement() {
           </div>
           <div className="form-actions">
             <Link to="/QuanLyDocGia">
-              <button type="button" className="btn">
-                Quay lại
-              </button>
+              <button type="button" className="btn-quaylai">Quay lại </button>
             </Link>
-            <button type="submit" className="btn primary">
-              Tạo tài khoản
-            </button>
+            <button type="submit" className="btn primary">Tạo tài khoản</button>
           </div>
         </form>
       </div>

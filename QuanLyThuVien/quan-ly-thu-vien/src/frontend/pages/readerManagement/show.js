@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 function ShowReaderManagement() {
   return (
     <div>
@@ -17,7 +17,7 @@ function ShowReaderManagement() {
               type="text"
               className="search-txt-dg"
               id="searchInput"
-              placeholder="Tìm kiếm theo tên, email,...."
+              placeholder="Tìm kiếm...."
             />
             <button className="search-btn-dg">
               <p className="btn-sr">Search</p>
@@ -31,7 +31,6 @@ function ShowReaderManagement() {
           <thead className="table-title">
             <tr className="text">
               <th>Mã độc giả</th>
-              <th>Mã sinh viên</th>
               <th>Tên độc giả</th>
               <th>Giới tính</th>
               <th>Ngày sinh</th>
@@ -44,47 +43,67 @@ function ShowReaderManagement() {
           <tbody>
             <tr>
               <td>1</td>
-              <td>sv02</td>
               <td>Nguyen Van A</td>
               <td>Nam</td>
               <td>03/07/2000</td>
               <td>HCM</td>
               <td>0912436787</td>
               <td>@gmail.com</td>
-              <td></td>
+              <td>
+                <Link to = "Sua">
+                  <i className="fas fa-wrench iconspacing"></i> 
+                </Link>
+                  <i className="fas fa-trash iconspacing"></i> 
+                
+              </td>
             </tr>
             <tr>
               <td>1</td>
-              <td>sv02</td>
               <td>Nguyen Van A</td>
               <td>Nam</td>
               <td>03/07/2000</td>
               <td>HCM</td>
               <td>0912436787</td>
               <td>@gmail.com</td>
-              <td></td>
+              <td>
+                <Link to = "Sua">
+                  <i className="fas fa-wrench iconspacing"></i> 
+                </Link>
+                  <i className="fas fa-trash iconspacing"></i> 
+                
+              </td>
             </tr>
             <tr>
               <td>1</td>
-              <td>sv02</td>
               <td>Nguyen Van A</td>
               <td>Nam</td>
               <td>03/07/2000</td>
               <td>HCM</td>
               <td>0912436787</td>
               <td>@gmail.com</td>
-              <td></td>
+              <td>
+                <Link to = "Sua">
+                  <i className="fas fa-wrench iconspacing"></i> 
+                </Link>
+                  <i className="fas fa-trash iconspacing"></i> 
+                
+              </td>
             </tr>
             <tr>
               <td>1</td>
-              <td>sv02</td>
               <td>Nguyen Van A</td>
               <td>Nam</td>
               <td>03/07/2000</td>
               <td>HCM</td>
               <td>0912436787</td>
               <td>@gmail.com</td>
-              <td></td>
+              <td>
+                <Link to = "Sua">
+                  <i className="fas fa-wrench iconspacing"></i> 
+                </Link>
+                  <i className="fas fa-trash iconspacing"></i> 
+                
+              </td>
             </tr>
           </tbody>
         </table>

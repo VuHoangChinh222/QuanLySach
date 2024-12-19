@@ -41,7 +41,7 @@ function EditReaderManagement() {
           </div>
           <div className="form-actions">
             <Link to="/QuanLyDocGia">
-              <button type="button" className="btn">
+              <button type="button" className="btn-quaylai">
                 Quay lại
               </button>
             </Link>

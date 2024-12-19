@@ -369,185 +369,9 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiChiTietPhieuMuonChiTietPhieuMuon
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'chi_tiet_phieu_muons';
-  info: {
-    displayName: 'ChiTietPhieuMuon';
-    pluralName: 'chi-tiet-phieu-muons';
-    singularName: 'chi-tiet-phieu-muon';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    id_phieu_muon: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::phieu-muon.phieu-muon'
-    >;
-    id_sach: Schema.Attribute.Relation<'oneToOne', 'api::sach.sach'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::chi-tiet-phieu-muon.chi-tiet-phieu-muon'
-    > &
-      Schema.Attribute.Private;
-    price: Schema.Attribute.Decimal;
-    publishedAt: Schema.Attribute.DateTime;
-    quantity: Schema.Attribute.Integer;
-    sts: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiDocGiaDocGia extends Struct.CollectionTypeSchema {
-  collectionName: 'doc_gias';
-  info: {
-    description: '';
-    displayName: 'DocGia';
-    pluralName: 'doc-gias';
-    singularName: 'doc-gia';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    address: Schema.Attribute.Text;
-    birthday: Schema.Attribute.Date;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.Email;
-    gender: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::doc-gia.doc-gia'
-    > &
-      Schema.Attribute.Private;
-    mssv: Schema.Attribute.UID;
-    name: Schema.Attribute.String;
-    phone: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    sts: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiNhanVienNhanVien extends Struct.CollectionTypeSchema {
-  collectionName: 'nhan_viens';
-  info: {
-    description: '';
-    displayName: 'NhanVien';
-    pluralName: 'nhan-viens';
-    singularName: 'nhan-vien';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    birthday: Schema.Attribute.Date;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    gender: Schema.Attribute.String;
-    id_tai_khoan: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::tai-khoan.tai-khoan'
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::nhan-vien.nhan-vien'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    phone: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    sts: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiPhieuMuonPhieuMuon extends Struct.CollectionTypeSchema {
-  collectionName: 'phieu_muons';
-  info: {
-    displayName: 'PhieuMuon';
-    pluralName: 'phieu-muons';
-    singularName: 'phieu-muon';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    datecreate: Schema.Attribute.Date;
-    datereturn: Schema.Attribute.Date;
-    id_the_thu_vien: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::the-thu-vien.the-thu-vien'
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::phieu-muon.phieu-muon'
-    > &
-      Schema.Attribute.Private;
-    nhan_vien: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::nhan-vien.nhan-vien'
-    >;
-    note: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    sts: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiRollRoll extends Struct.CollectionTypeSchema {
-  collectionName: 'rolls';
-  info: {
-    description: '';
-    displayName: 'VaiTro';
-    pluralName: 'rolls';
-    singularName: 'roll';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::roll.roll'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    rollname: Schema.Attribute.String;
-    sts: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiSachSach extends Struct.CollectionTypeSchema {
   collectionName: 'saches';
   info: {
-    description: '';
     displayName: 'Sach';
     pluralName: 'saches';
     singularName: 'sach';
@@ -559,20 +383,21 @@ export interface ApiSachSach extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dateentry: Schema.Attribute.Date;
-    id_tac_gia: Schema.Attribute.Relation<'oneToOne', 'api::tac-gia.tac-gia'>;
-    id_the_loais: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::the-loai.the-loai'
-    >;
+    date_entry: Schema.Attribute.Date;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::sach.sach'> &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
-    quantity: Schema.Attribute.BigInteger;
-    sts: Schema.Attribute.String;
+    quantity: Schema.Attribute.Integer;
+    sach_name: Schema.Attribute.String;
+    sts: Schema.Attribute.Text;
+    tac_gias: Schema.Attribute.Relation<'manyToMany', 'api::tac-gia.tac-gia'>;
+    the_loais: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::the-loai.the-loai'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -582,7 +407,6 @@ export interface ApiSachSach extends Struct.CollectionTypeSchema {
 export interface ApiTacGiaTacGia extends Struct.CollectionTypeSchema {
   collectionName: 'tac_gias';
   info: {
-    description: '';
     displayName: 'TacGia';
     pluralName: 'tac-gias';
     singularName: 'tac-gia';
@@ -591,7 +415,6 @@ export interface ApiTacGiaTacGia extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    country: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -601,9 +424,10 @@ export interface ApiTacGiaTacGia extends Struct.CollectionTypeSchema {
       'api::tac-gia.tac-gia'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    sts: Schema.Attribute.String;
+    saches: Schema.Attribute.Relation<'manyToMany', 'api::sach.sach'>;
+    sts: Schema.Attribute.Text;
+    tac_gia_name: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -613,7 +437,6 @@ export interface ApiTacGiaTacGia extends Struct.CollectionTypeSchema {
 export interface ApiTaiKhoanTaiKhoan extends Struct.CollectionTypeSchema {
   collectionName: 'tai_khoans';
   info: {
-    description: '';
     displayName: 'TaiKhoan';
     pluralName: 'tai-khoans';
     singularName: 'tai-khoan';
@@ -625,6 +448,7 @@ export interface ApiTaiKhoanTaiKhoan extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -633,19 +457,17 @@ export interface ApiTaiKhoanTaiKhoan extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     password: Schema.Attribute.Password;
     publishedAt: Schema.Attribute.DateTime;
-    roll: Schema.Attribute.Relation<'oneToOne', 'api::roll.roll'>;
-    sts: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    username: Schema.Attribute.String;
+    user_name: Schema.Attribute.String;
+    vai_tros: Schema.Attribute.Relation<'manyToMany', 'api::vai-tro.vai-tro'>;
   };
 }
 
 export interface ApiTheLoaiTheLoai extends Struct.CollectionTypeSchema {
   collectionName: 'the_loais';
   info: {
-    description: '';
     displayName: 'TheLoai';
     pluralName: 'the-loais';
     singularName: 'the-loai';
@@ -663,22 +485,22 @@ export interface ApiTheLoaiTheLoai extends Struct.CollectionTypeSchema {
       'api::the-loai.the-loai'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    sts: Schema.Attribute.String;
+    saches: Schema.Attribute.Relation<'manyToMany', 'api::sach.sach'>;
+    sts: Schema.Attribute.Text;
+    the_loai_name: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiTheThuVienTheThuVien extends Struct.CollectionTypeSchema {
-  collectionName: 'the_thu_viens';
+export interface ApiVaiTroVaiTro extends Struct.CollectionTypeSchema {
+  collectionName: 'vai_tros';
   info: {
-    description: '';
-    displayName: 'TheThuVien';
-    pluralName: 'the-thu-viens';
-    singularName: 'the-thu-vien';
+    displayName: 'VaiTro';
+    pluralName: 'vai-tros';
+    singularName: 'vai-tro';
   };
   options: {
     draftAndPublish: true;
@@ -687,20 +509,22 @@ export interface ApiTheThuVienTheThuVien extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    enddate: Schema.Attribute.Date;
-    id_doc_gia: Schema.Attribute.Relation<'oneToOne', 'api::doc-gia.doc-gia'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::the-thu-vien.the-thu-vien'
+      'api::vai-tro.vai-tro'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    startdate: Schema.Attribute.Date;
-    sts: Schema.Attribute.String;
+    sts: Schema.Attribute.Text;
+    tai_khoans: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::tai-khoan.tai-khoan'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    vai_tro_name: Schema.Attribute.String;
   };
 }
 
@@ -1213,16 +1037,11 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::chi-tiet-phieu-muon.chi-tiet-phieu-muon': ApiChiTietPhieuMuonChiTietPhieuMuon;
-      'api::doc-gia.doc-gia': ApiDocGiaDocGia;
-      'api::nhan-vien.nhan-vien': ApiNhanVienNhanVien;
-      'api::phieu-muon.phieu-muon': ApiPhieuMuonPhieuMuon;
-      'api::roll.roll': ApiRollRoll;
       'api::sach.sach': ApiSachSach;
       'api::tac-gia.tac-gia': ApiTacGiaTacGia;
       'api::tai-khoan.tai-khoan': ApiTaiKhoanTaiKhoan;
       'api::the-loai.the-loai': ApiTheLoaiTheLoai;
-      'api::the-thu-vien.the-thu-vien': ApiTheThuVienTheThuVien;
+      'api::vai-tro.vai-tro': ApiVaiTroVaiTro;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

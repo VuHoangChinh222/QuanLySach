@@ -1,12 +1,13 @@
-import { Link, Outlet } from "react-router-dom";
+import "../assets/bootstrap/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 function Menu() {
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
-      <a href="#" className="brand-link">
+      <Link to="Home" className="nav-link">
         <p className="brand" data-widget="treeview">
           QUAN LY THU VIEN
         </p>
-      </a>
+      </Link>
       <div className="sidebar">
         <nav className="mt-2">
           <ul
@@ -22,46 +23,40 @@ function Menu() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="QuanLyHeThong" className="nav-link">
+              <Link to="/QuanLyHeThong" className="nav-link">
                 <i className="nav-icon fas fa-database"></i>
                 <p>Quản lý hệ thống</p>
               </Link>
             </li>
             <li className="nav-item">
-              <a href="QuanLyKhoSach.html" className="nav-link">
+              <Link to="/QuanLyKhoSach" className="nav-link">
                 <i className="nav-icon fas fa-book"></i>
                 <p>Quản lý kho sách</p>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="QuanLyDocGia" className="nav-link">
+              <Link to="/QuanLyDocGia" className="nav-link">
                 <i className="nav-icon fas fa-user"></i>
                 <p>Quản lý độc giả</p>
               </Link>
             </li>
             <li className="nav-item">
-              <a href="QuanLyMuonTraSach.html" className="nav-link">
+              <a href="/QuanLyMuonTraSach" className="nav-link">
                 <i className="nav-icon fas fa-file"></i>
                 <p>Quản lý mượn trả sách</p>
               </a>
             </li>
             <li className="nav-item">
-              <a href="BaoCaoThongKe.html" className="nav-link">
+              <a href="/BaoCaoThongKe" className="nav-link">
                 <i className="nav-icon fas fa-chart-bar"></i>
                 <p>Báo cáo thống kê</p>
               </a>
             </li>
             <li className="nav-item">
-              <a href="QuanLySachCu.html" className="nav-link">
-                <i className="nav-icon fas fa-book-open"></i>
-                <p>Quản lý sách cũ</p>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
+              <Link to= "/LogOut" className="nav-link">
                 <i className="nav-icon fas fa-sign-out-alt"></i>
                 <p>Thoát</p>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

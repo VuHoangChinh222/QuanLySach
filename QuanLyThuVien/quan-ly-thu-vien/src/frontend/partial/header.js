@@ -1,5 +1,6 @@
 import Menu from "./menu";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 function SearchBox() {
   const [searchValue, setSearchValue] = useState("");
 
@@ -37,7 +38,7 @@ function Header() {
             <a
               className="nav-link"
               data-widget="pushmenu"
-              href="#"
+              href=""
               role="button"
             >
               <i className="fas fa-bars"></i>
@@ -45,13 +46,16 @@ function Header() {
           </li>
         </ul>
         <SearchBox />
+        <Link to = "lapphieu">
+            <button className="hanhdong">Lập phiếu</button>
+        </Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <a className="nav-link" href="#">
               <div className="user-container">
                 <div className="image">
                   <img
-                    src="dist/img/user2-160x160.jpg"
+                    src="assets/dist/img/user2-160x160.jpg"
                     className="img-circle elevation-2"
                     alt="User"
                   />
